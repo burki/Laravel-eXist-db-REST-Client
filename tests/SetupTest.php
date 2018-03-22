@@ -1,8 +1,8 @@
-<?php namespace BCDH\ExistDbRestClient;
+<?php namespace ExistDbRestClient;
 
 /**
  * Class SetupTest
- * @package BCDH\ExistDbRestClient
+ * @package ExistDbRestClient
  */
 class SetupTest extends \PHPUnit_Framework_TestCase
 {

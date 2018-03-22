@@ -1,4 +1,4 @@
-<?php namespace BCDH\ExistDbRestClient;
+<?php namespace ExistDbRestClient;
 
 use Sabre\Xml\Reader;
 use Sabre\Xml\Service;

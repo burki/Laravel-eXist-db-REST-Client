@@ -1,20 +1,18 @@
 {
-    "name": "bcdh/exist-db-rest-client",
+    "name": "burki/exist-db-rest-client",
     "type": "library",
-    "description": "A Laravel client for querying and transforming results from eXist-db via REST API",
+    "description": "A client for querying and transforming results from eXist-db via REST API",
     "keywords": [
         "eXist-db",
         "xquery",
         "xslt",
         "php",
-        "laravel",
         "rest"
     ],
-    "homepage": "https://github.com/BCDH/Laravel-eXist-db-REST-Client",
+    "homepage": "https://github.com/burki/eXist-db-REST-Client",
     "license": "GPL-2.0",
     "require": {
         "php" : "~5.5|~7.0",
-        "illuminate/support": "5.*",
         "guzzlehttp/guzzle": "^5.0|^6.0",
         "sabre/xml": "~1.4"
     },
@@ -25,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BCDH\\ExistDbRestClient\\": "src"
+            "ExistDbRestClient\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BCDH\\ExistDbRestClient\\": "tests"
+            "ExistDbRestClient\\": "tests"
         }
     },
     "scripts": {

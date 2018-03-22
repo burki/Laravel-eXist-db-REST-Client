@@ -1,6 +1,6 @@
 <?php
 
-namespace BCDH\ExistDbRestClient;
+namespace ExistDbRestClient;
 
 use Sabre\Xml\Service;
 use Sabre\Xml\Writer;
@@ -37,7 +37,7 @@ class XMLResult implements ResultInterface {
     }
 
     /**
-     * XLS Transformations
+     * XSL Transformations
      *
      * @param string $view Stylesheet file path
      * @param string|array|XmlSerializable $value Document to be transformed

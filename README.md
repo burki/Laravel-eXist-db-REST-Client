@@ -1,57 +1,45 @@
-Laravel eXist-db REST Client
-=============================
+eXist-db REST Client
+====================
 
-A Laravel client for querying and transforming results from eXist-db via REST API.
+A PHP client for querying and transforming results from eXist-db via REST API.
+
+Forked from https://github.com/BCDH/Laravel-eXist-db-REST-Client
 
 ##  Requirements:
 
-- Laravel 5
 - PHP 5.5
 - PHP XSLT extension
 ```bash
 sudo apt-get install php5-xsl
 ```
 
-## Installing
-
-####1. Add the service provider to your config/app.php:
-
-    BCDH\ExistDbRestClient\ExistDbServiceProvider::class
-
-####2. Publish your configuration file:
-
-    php artisan vendor:publish
-
-####3. Edit your connection credentials in `config/exist-db.php`
-
-    [
-        'user'          => 'admin',
-        'password'      => 'admin',
-
-        'protocol'      => 'http',
-        'host'          => 'localhost',
-        'port'          => 8080,
-        'path'          => 'exist/rest',
-
-        /* alternatively, you can specify the URI as a whole in the form */
-        // 'uri'=>'http://localhost:8080/exist/rest/'
-
-        'xsl'           => 'no',
-        'indent'        => 'yes',
-        'howMany'       => 10,
-        'start'         => 1,
-        'wrap'          => 'yes'
-    ]
-
-
 ## Usage
 
 ```php
-use BCDH\ExistDbRestClient\ExistDbRestClient;
+use ExistDbRestClient\ExistDbRestClient;
+
+$config = [
+    'user'          => 'admin',
+    'password'      => 'admin',
+
+    'protocol'      => 'http',
+    'host'          => 'localhost',
+    'port'          => 8080,
+    'path'          => 'exist/rest',
+
+    /* alternatively, you can specify the URI as a whole in the form */
+    // 'uri'=>'http://localhost:8080/exist/rest/'
+
+    'xsl'           => 'no',
+    'indent'        => 'yes',
+    'howMany'       => 10,
+    'start'         => 1,
+    'wrap'          => 'yes'
+];
 
 $q = 'for $cd in /CD[./ARTIST=$artist] return $cd';
 
-$connection = new ExistDbRestClient();
+$connection = new ExistDbRestClient($config);
 
 $query = $connection->prepareQuery();
 $query->bindVariable('artist', 'Bonnie Tyler');

@@ -1,4 +1,4 @@
-<?php namespace BCDH\ExistDbRestClient;
+<?php namespace ExistDbRestClient;
 
 class VariableBindingTest extends SetupTest {
     public function testInsertData() {

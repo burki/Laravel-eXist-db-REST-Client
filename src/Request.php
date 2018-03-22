@@ -1,4 +1,4 @@
-<?php namespace BCDH\ExistDbRestClient;
+<?php namespace ExistDbRestClient;
 
 class Request {
     public $method;

@@ -1,6 +1,6 @@
-<?php namespace BCDH\ExistDbRestClient;
+<?php namespace ExistDbRestClient;
 
-class XLSTransformationsTest extends SetupTest {
+class XSLTransformationsTest extends SetupTest {
     public function testInsertData() {
         parent::insertData();
     }
@@ -26,7 +26,7 @@ class XLSTransformationsTest extends SetupTest {
         $html = $result->transform(__DIR__ . '/xml/cd_catalog_simplified.xsl', $singleCd);
         $expected = $this->getExpectedXml($result->getDocument());
 
-        $this->assertTrue(str_contains($html, $expected));
+        $this->assertTrue(false !== strpos($html, $expected));
     }
 
     /**
@@ -49,7 +49,7 @@ class XLSTransformationsTest extends SetupTest {
         $html = $result->transform(__DIR__ . '/xml/cd_catalog_simplified.xsl', $document, $rootTagName);
         $expected = $this->getExpectedXml($document);
 
-        $this->assertTrue(str_contains($html, $expected));
+        $this->assertTrue(false !== strpos($html, $expected));
     }
 
     private function getExpectedXml($results) {

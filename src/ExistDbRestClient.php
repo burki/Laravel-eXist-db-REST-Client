@@ -1,6 +1,6 @@
 <?php
 
-namespace BCDH\ExistDbRestClient;
+namespace ExistDbRestClient;
 
 use GuzzleHttp\Client as GuzzleClient;
 
