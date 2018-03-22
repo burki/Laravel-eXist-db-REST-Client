@@ -226,7 +226,7 @@ class ClientTest extends SetupTest {
         $this->assertEquals($expected, $count);
 
         /** @var CD $object */
-        $object = $results[5]['value'];
+        $object = $results[8]['value'];
 
         $this->assertEquals($object->artist, "The Communards");
     }
